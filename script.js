@@ -236,6 +236,13 @@ function combination() {
 }
 ///////////////////////////////////////////////////////////////
 /*ATM*/
+function atmPin(){
+  let cname=  prompt("what is your name?");
+  alert ("Welcome " + cname);
+let cpin= prompt("please input your pin")
+alert("pin correct");
+
+}
 
 function atm(){
 
@@ -247,7 +254,7 @@ function atm(){
 	}
 	balance = balance - amount;
     alert('Transaction Approved!');
-    alert('your new balance is $  '+ balance );
+    alert('your new balance is $ '+ balance );
     
 };
 function atmm(){
@@ -255,9 +262,9 @@ function atmm(){
     alert(" your available balance is $ " + balance);
 };
 function atmDeposit(){
-    let balance = parseInt(2000);
-   let customer= parseInt(prompt("how much do you want to deposit?"))
+    let balance = 2000;
+   let customer=prompt("how much do you want to deposit?")
    alert("you are making a deposit of " + customer)
-   alert("Transaction Successful! Thank you for banking with us")
-   alert("your new balance is " + (customer) + (balance))
+   alert("Transaction Successful! Thank you for banking with us");
+   alert("your new balance is " + (parseInt(customer) + parseInt(balance)));
 }
