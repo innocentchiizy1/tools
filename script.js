@@ -90,6 +90,7 @@ function PrimeNumber() {
 };
 //////////////////////////////////////////////////////////////////////////////////////////////
 /*SORT ARRAY(FROM LOW TO HIGH)*/
+
 let p = document.getElementById('comment1');
 p.innerHTML = "How many number do you want to sort?";
 let counter1 = 1;
@@ -122,51 +123,51 @@ function sortArray() {
 
 /////////////////////////////////////////////////////////////////////////////////////
 /*SIMPLE INTEREST*/
-function simpleInterest(){
-    var   p = document.getElementById("p").value;
-    var   r = document.getElementById("r").value;
-    var   t = document.getElementById("t").value;
-   var si =(p*r*t/100);
-       result = document.getElementById("simple");
-   result.innerHTML = "The interest is " +si;
-   
-   };
-   /////////////////////////////////////////////////////////////////
-   /*ALMIGHTY FORMULA*/
-   function almighty() {
-    var a = parseInt(document.getElementById("a").value);
-   var b = parseInt(document.getElementById("b").value);
-   var c =parseInt( document.getElementById("c").value) ;
+function simpleInterest() {
+    var p = document.getElementById("p").value;
+    var r = document.getElementById("r").value;
+    var t = document.getElementById("t").value;
+    var si = (p * r * t / 100);
+    result = document.getElementById("simple");
+    result.innerHTML = "The interest is " + si;
 
- //  let result1 = ((-1 * b) + (Math.sqrt(b^2) - (4 * a * c))) / (2 * a);
-    let result1 = ((-b) + (Math.sqrt(Math.pow(b,2)) - (4 * a * c))) / (2 * a);
-    
-   // let result2 = ((-1 * b) - (Math.sqrt(b^2) - (4 * a * c))) / (2 * a);
-    let result2 = ((-b) - (Math.sqrt(Math.pow(b,2)) - (4 * a * c))) / (2 * a);
+};
+/////////////////////////////////////////////////////////////////
+/*ALMIGHTY FORMULA*/
+function almighty() {
+    var a = parseInt(document.getElementById("a").value);
+    var b = parseInt(document.getElementById("b").value);
+    var c = parseInt(document.getElementById("c").value);
+
+    //  let result1 = ((-1 * b) + (Math.sqrt(b^2) - (4 * a * c))) / (2 * a);
+    let result1 = ((-b) + (Math.sqrt(Math.pow(b, 2)) - (4 * a * c))) / (2 * a);
+
+    // let result2 = ((-1 * b) - (Math.sqrt(b^2) - (4 * a * c))) / (2 * a);
+    let result2 = ((-b) - (Math.sqrt(Math.pow(b, 2)) - (4 * a * c))) / (2 * a);
 
     document.getElementById('almighty').innerHTML = result1 + "&" + result2;
 };
 ////////////////////////////////////////////////////////////
 /*COMPOUND INTEREST*/
-function compoundInterest(){
-    var   pp = document.getElementById("p1").value;
-    var   rr = document.getElementById("r1").value;
-    var   tt = document.getElementById("t1").value;
-   var nn = document.getElementById("n1").value;
-    var ci =  (pp*((1 + (rr/(nn*100))), (nn*tt)));
+function compoundInterest() {
+    var pp = document.getElementById("p1").value;
+    var rr = document.getElementById("r1").value;
+    var tt = document.getElementById("t1").value;
+    var nn = document.getElementById("n1").value;
+    var ci = (pp * ((1 + (rr / (nn * 100))), (nn * tt)));
     result = document.getElementById("compound");
-   result.innerHTML = "The compound interest is " +ci;
-   
-   };
-   ///////////////////////////////////////////
-   /*DECIMAL TO BINART*/
-   
-function decToBin(){
+    result.innerHTML = "The compound interest is " + ci;
+
+};
+///////////////////////////////////////////
+/*DECIMAL TO BINART*/
+
+function decToBin() {
     var num = document.getElementById('numb').value;
-    var bin ="";
-    while(num>0){
-        bin = num% 2+bin;
-        num = Math.floor(num/2)
+    var bin = "";
+    while (num > 0) {
+        bin = num % 2 + bin;
+        num = Math.floor(num / 2)
     }
     document.getElementById('decimal').innerHTML = bin;
 }
@@ -184,6 +185,31 @@ function factorial() {
     }
     document.getElementById('factorial').innerHTML = fact;
 }
+////////////////////////////////////////////////////////////////////////////
+/*PERMUTATION*/
+Math.factorial = function (fact) {
+
+    var i = fact;
+
+
+
+    for (i = 1; i <= num; i++) {
+
+        fact = fact * i;
+    }
+    return fact;
+}
+
+
+function permutation() {
+    let n = document.getElementById("Nn").value;
+    let r = document.getElementById("Rr").value;
+    let answer = Math.factorial(n) / (Math.factorial(n - r));
+
+    document.getElementById('perm').innerHTML = answer;
+
+}
+
 ////////////////////////////////////////////////////////////////////////////
 /*COMBINATION*/
 Math.factorial = function (fact) {
@@ -209,4 +235,29 @@ function combination() {
 
 }
 ///////////////////////////////////////////////////////////////
+/*ATM*/
 
+function atm(){
+
+    let balance = 2000;
+    let amount =document.getElementById("amount").value;
+		if(amount >= balance){
+		alert('Insufficient Funds');
+		return false;
+	}
+	balance = balance - amount;
+    alert('Transaction Approved!');
+    alert('your new balance is $  '+ balance );
+    
+};
+function atmm(){
+    let balance = 2000;
+    alert(" your available balance is $ " + balance);
+};
+function atmDeposit(){
+    let balance = parseInt(2000);
+   let customer= parseInt(prompt("how much do you want to deposit?"))
+   alert("you are making a deposit of " + customer)
+   alert("Transaction Successful! Thank you for banking with us")
+   alert("your new balance is " + (customer) + (balance))
+}

@@ -11,9 +11,9 @@
 </head>
 
 <body>
-        <header>
-                <h1>INNOCENT TOOLS</h1>
-                    </header>
+    <header>
+        <h1>INNOCENT TOOLS</h1>
+    </header>
     <!-------HIGHEST NUMBER ------>
     <h2>HIGHEST NUMBER</h2>
     <p>INPUT 1</p><input id='input-one' type="number"> <br>
@@ -36,6 +36,7 @@
         <h3>The highest number is</h3>
     </div>
     <div id="answer"></div>
+    
     <!---------PRIME NUMBER--------->
     <h2>PRIME NUMBER</h2>
 
@@ -43,7 +44,9 @@
     <input type="button" value="Find Prime Number" onclick="PrimeNumber()" name="find" />
 
     <div id="prime"></div>
+
     <!---------SORT ARRAY(FROM LOW TO HIGH)------->
+    
     <h2>SORT ARRAY(LOW TO HIGH</h2>
     <div>
         <p id="comment1"></p>
@@ -55,14 +58,18 @@
         <h4>The new Array is</h4>
     </div>
     <div id="sort"></div>
+
     <!------ALMIGHTY FORMULA----->
+
     <h2>ALMIGHTY FORMULAR</h2>
     <h3>a:</h3> <input id="a" type="number"><br />
     <h3> b:</h3> <input id="b" type="number"><br />
     <h3> c:</h3> <input id="c" type="number"><br /><br />
     <button onclick="almighty()">Calculate</button>
     <p id="almighty"></p>
+
     <!----------SIMPLE INTEREST------->
+
     <h2>SIMPLE INTEREST</h2>
     <h3>Principal:</h3> <input id="p" type="number"><br />
     <h3> Rate:</h3> <input id="r" type="number"><br />
@@ -71,6 +78,7 @@
     <p id="simple"></p>
 
     <!----------COMPOUND INTEREST------->
+
     <h2>COMPOUND INTEREST</h2>
     Principal: <input id="p1"><br /><br />
     Rate: <input id="r1"><br /><br />
@@ -78,6 +86,7 @@
     Compounding Times Per Year:<input id="n1"><br /><br />
     <button onclick="compoundInterest()">Calculate</button>
     <p id="compound"></p>
+
     <!------DECIMAL TO BINARY-->
 
     <h2>CONVERT DECIMAL TO BINARY</h2>
@@ -90,21 +99,53 @@
     <div id="decimal"></div>
 
     <!-------FACTORIAL----->
-    
+
     <h2>FACTORIAL</h2>
-    <p> NUMBER</p><input id='fact' type="number" placeholder="type a number"> <br> 
-   
-    <button onclick="factorial()"><p class="compare">Calculate</p></button>
-   
+    <p> NUMBER</p><input id='fact' type="number" placeholder="type a number"> <br>
+
+    <button onclick="factorial()">
+        <p class="compare">Calculate</p>
+    </button>
+
     <div id="factorial"></div>
-     <!----------COMBINATION----->
+
+    <!-------PERMUTATION-->
+    <h2>PERMUTATION</h2>
+    <p> N</p><input id='Nn' type="number" placeholder="type a number"> <br>
+    <p>R</p><input id='Rr' type="number" placeholder="type a number"> <br>
+
+    <button onclick="permutation()">
+        <p class="compare">Calculate</p>
+    </button>
+
+    <div id="perm"></div>
+
+
+    <!----------COMBINATION----->
     <h2>COMBINATION</h2>
-    <p> N</p><input id='N' type="number" placeholder="type a number"> <br> 
-    <p>R</p><input id='R' type="number" placeholder="type a number"> <br> 
-   
-    <button onclick="combination()"><p class="compare">Calculate</p></button>
-   
+    <p> N</p><input id='N' type="number" placeholder="type a number"> <br>
+    <p>R</p><input id='R' type="number" placeholder="type a number"> <br>
+
+    <button onclick="combination()">
+        <p class="compare">Calculate</p>
+    </button>
+
     <div id="comb"></div>
+
+  <!----------ATM----->
+  <h2>ATM</h2>
+
+<h4>Inquiry(Balance)</h4>
+<button onclick="atmm()" >Submit</button>
+
+<h4>withdrwal</h4>
+    <input type="text" id="amount" placeholder="Enter withdrwal amount">
+
+    <button onclick="atm()" id="amount">Submit</button>
+
+    <h4>Deposit</h4>
+    <button onclick="atmDeposit()" >Submit</button>
+
     <script src="script.js"></script>
 </body>
 
